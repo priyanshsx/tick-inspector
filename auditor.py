@@ -4,11 +4,14 @@ import pandas as pd
 
 # asking the user for the file they want read 
 
-user_file = input("Please enter the name of the file you want the Tick Inspector to read: ")
+while True:
+    user_file = input("Please enter the name of the file you want the Tick Inspector to read: ")
 
-df = pd.read_csv(user_file, index_col='date', parse_dates=True)
-# print(df.index)
-# print(df.head(3))
+    try: 
+       df = pd.read_csv(user_file, index_col='date', parse_dates=True)
+       break
+    except FileNotFoundError:
+       print(f"\nFile not found. Please ensure that the file is in the folder where this script runs from and ensure that you get the name exactly right.\n")
 
 # checking for duplicates 
 duplicates = df.index.duplicated().sum()
