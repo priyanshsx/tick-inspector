@@ -2,6 +2,8 @@
 
 A standalone Python CLI application designed to audit historical financial market data for structural integrity and mathematical accuracy. Tick Inspector acts as a quality assurance layer, ensuring data is clean before being fed into algorithmic trading models or backtesting engines.
 
+Looking to download crypto data? You can do it from Yahoo Finance using my script [here](https://github.com/priyanshsx/learning-python/tree/main/ohlcv_downloader)! 
+
 ## Features
 
 * **Fail-Safe File Loading:** Uses infinite loop and `try/except` logic to prevent crashes from typos when users input file paths.
